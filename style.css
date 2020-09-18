@@ -1,3 +1,80 @@
-li {
+body  {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  background-color: rgb(220,220,220);
+  color: #210120;
+  text-align: center;
+
+}
+
+.intro, .picture, .description, .social {
+  background: white;                         /* White background */
+  padding: 30px;                             /* Internal space */
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  width: 900px;     /* Fix the width first*/
+  margin: 20px auto; /* Let CSS compute the same left & right margins automatically*/
+}
+
+h1, h2 {
+  font-size: 26px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+#picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+a {
+  color: #150816;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(20,20,20);
+  text-decoration: none;
+}
+
+.list-inline {
   list-style: none;
+  padding-left: 0px; /* kill remaining padding left */
+}
+
+.list-inline > li {
+  display: inline; /* change list item behavior to inline */
+  padding: 0px 20px; /* add som left/right padding between list items */
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 800px;
+  }
+  .intro, .picture, .description, .social {
+    width: 600px;     /* Fix the width first*/
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 680px;
+  }
+  .intro, .picture, .description, .social {
+    width: 480px;     /* Fix the width first*/
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+    .intro, .picture, .description, .social {
+    width: 300px;     /* Fix the width first*/
+  }
 }
